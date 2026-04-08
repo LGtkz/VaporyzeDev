@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './menu.html',
   styleUrl: './menu.scss',
 })
-export class Menu {}
+export class Menu {
+  icon: string = 'VpSemFundo.png';
+
+  getImagePath(icon: string): string {
+    return `./img/${icon}`;
+  }
+}
