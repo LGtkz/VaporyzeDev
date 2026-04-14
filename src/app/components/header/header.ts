@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  icon: string = 'User.png';
+  getImagePath(icon: string): string {
+    return `./img/${icon}`;
+  }
+}
