@@ -1,0 +1,75 @@
+<div class="container_container">
+    <div class="container">
+    <div class="cardValores">
+        <p id="Title">Total de dividas a pagar</p>
+        <div class="valores">
+            <h2>R$ 0,00</h2>
+        </div>
+    </div>
+
+    <div class="cardValores">
+        <p id="Title">Total de dividas a pagar</p>
+        <div class="valores">
+            <h2>R$ 0,00</h2>
+        </div>
+    </div>
+
+    <div class="cardValores">
+        <p id="Title">Total de dividas a pagar</p>
+        <div class="valores">
+            <h2>R$ 0,00</h2>
+        </div>
+    </div>
+</div>
+
+<div class="containerDividas">
+    <div class="headerDividas">
+        <div class="dividasSelect">
+            <label class="radioOption">
+                <input
+                    type="radio"
+                    name="dividaStatus"
+                    value="pagas"
+                    [checked]="selectedDivida === 'pagas'"
+                    (change)="onDividaChange($event)"
+                />
+                <span>Dívidas Pagas</span>
+            </label>
+            <label class="radioOption">
+                <input
+                    type="radio"
+                    name="dividaStatus"
+                    value="aberto"
+                    [checked]="selectedDivida === 'aberto'"
+                    (change)="onDividaChange($event)"
+                />
+                <span>Dívidas em Aberto</span>
+            </label>
+            <label class="radioOption">
+                <input
+                    type="radio"
+                    name="dividaStatus"
+                    value="atrasadas"
+                    [checked]="selectedDivida === 'atrasadas'"
+                    (change)="onDividaChange($event)"
+                />
+                <span>Dívidas Atrasadas</span>
+            </label>
+        </div>
+    </div>
+    <div class="periodoDash">
+        <div *ngIf="selectedDivida === 'pagas'" class="dashCard">
+            <h3>Dívidas Pagas</h3>
+            <p>Resumo dos pagamentos concluídos, valores quitados e histórico.</p>
+        </div>
+        <div *ngIf="selectedDivida === 'aberto'" class="dashCard">
+            <h3>Dívidas em Aberto</h3>
+            <p>Mostra as dívidas atuais que ainda precisam ser pagas.</p>
+        </div>
+        <div *ngIf="selectedDivida === 'atrasadas'" class="dashCard">
+            <h3>Dívidas Atrasadas</h3>
+            <p>Exibe as dívidas com pagamento em atraso e alertas prioritários.</p>
+        </div>
+    </div>
+</div>
+</div>
